@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Typing Speed Test</h1>
-        <p class="description">Try to complete the given paragraph within 90 seconds. Type as accurately and quickly as possible!</p>
+    <p class="description">Try to complete the given paragraph within 90 seconds. Type as accurately and quickly as possible!</p>
     <div class="wrapper">        
         <input type="text" class="input-field">
         <div class=""></div>
@@ -40,6 +40,14 @@
             </div>
         </div>
     </div>
+    <div id="result-popup" class="popup-bar hidden">
+        <p><strong>Time's Up!</strong></p>
+        <p>WPM: <span id="final-wpm">0</span></p>
+        <p>CPM: <span id="final-cpm">0</span></p>
+        <p>Mistakes: <span id="final-mistakes">0</span></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
     <script src="paragraphs.js"></script>
     <script src="index.js"></script>
 </body>

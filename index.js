@@ -6,6 +6,13 @@ cpmTag=document.querySelector(".cpm span"),
 tryAgainbtn=document.querySelector("button"),
 mistakeTag=document.querySelector(".mistakes span");
 
+const popup = document.querySelector('.result-popup');
+const finalWpm = document.getElementById('finalWpm');
+const finalCpm = document.getElementById('finalCpm');
+const finalMistakes = document.getElementById('finalMistakes');
+const closeBtn = document.querySelector('.close-btn');
+const errorSound = new Audio('error.mp3');
+
 
 let timer,
 maxTime=90,
@@ -53,6 +60,8 @@ function initTyping(){
             {
                 mistakes++;
                 characters[charIndex].classList.add("incorrect");
+                errorSound.currentTime = 0;
+                errorSound.play();
             }
             charIndex++;
         }   
@@ -70,6 +79,10 @@ function initTyping(){
     else{
         inputField.value="";
         clearInterval(timer);
+        finalWpm.innerText = wpmTag.innerText;
+        finalCpm.innerText = cpmTag.innerText;
+        finalMistakes.innerText = mistakeTag.innerText;
+        popup.classList.remove("hidden");
     }
 }
 
@@ -99,3 +112,7 @@ function resetGame(){
 randomParagraph();
 inputField.addEventListener("input",initTyping);
 tryAgainbtn.addEventListener("click",resetGame);
+closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+});
+

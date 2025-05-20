@@ -8,7 +8,10 @@
     <meta name="viewport" content="device-width, initial-scale=1.0">
 </head>
 <body>
+    <h1 class="title">Typing Speed Test</h1>
+    <p class="description">Try to complete the given paragraph within 90 seconds. Type as accurately and quickly as possible!</p>
     <div class="wrapper">
+        
         <input type="text" class="input-field">
         <div class=""></div>
         <div class="content-box">
@@ -38,6 +41,18 @@
             </div>
         </div>
     </div>
+
+    <div class="result-popup hidden">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Great Job! 😊</h2>
+        <p><strong>WPM:</strong> <span id="finalWpm">0</span></p>
+        <p><strong>CPM:</strong> <span id="finalCpm">0</span></p>
+        <p><strong>Mistakes:</strong> <span id="finalMistakes">0</span></p>
+    </div>
+</div>
+
+
     <script src="paragraphs.js"></script>
     <script src="index.js"></script>
 </body>

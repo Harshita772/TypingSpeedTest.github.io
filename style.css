@@ -20,6 +20,19 @@ body{
     padding: 35px;
 
 }
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 1.2em;
+    color: #555;
+}
+
 .wrapper .input-field{
     z-index: -999;
     opacity: 0;

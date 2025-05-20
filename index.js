@@ -73,35 +73,15 @@ function initTyping(){
     }
 }
 
-function showPopup(wpm, cpm, mistakes) {
-    document.getElementById("final-wpm").textContent = wpm;
-    document.getElementById("final-cpm").textContent = cpm;
-    document.getElementById("final-mistakes").textContent = mistakes;
-    document.getElementById("result-popup").classList.remove("hidden");
-}
-
-function closePopup() {
-    document.getElementById("result-popup").classList.add("hidden");
-}
-
 function initTimer(){
-    if(timeLeft > 0){
+    if(timeLeft>0){
         timeLeft--;
-        timeTag.innerText = timeLeft;
-    } else {
+        timeTag.innerText=timeLeft;
+    }
+    else{
         clearInterval(timer);
-
-        // Calculate final WPM and CPM
-        let wpm = Math.round((((charIndex - mistakes) / 5) / maxTime) * 90);
-        let cpm = charIndex - mistakes;
-
-        if (wpm < 0 || !wpm || wpm === Infinity) wpm = 0;
-        if (cpm < 0 || !cpm || cpm === Infinity) cpm = 0;
-
-        showPopup(wpm, cpm, mistakes);
     }
 }
-
 
 function resetGame(){
     randomParagraph();

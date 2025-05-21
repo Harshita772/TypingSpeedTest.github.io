@@ -7,7 +7,7 @@ An interactive and responsive web application designed to evaluate typing speed 
 
 ## Features
 
-- **Timed Challenge**: 90-second countdown to test speed under pressure.
+- **Timed Challenge**: 90-second countdown to test speed.
 - **Randomized Paragraphs**: A new paragraph each round ensures a unique experience.
 - **Real-Time Metrics**:
   - **WPM (Words Per Minute)**
